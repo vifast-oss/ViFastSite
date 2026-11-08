@@ -22,7 +22,7 @@
     <div class="container site-header__inner">
       <a class="brand" href="#top" aria-label="ViFast — về đầu trang">
         <img class="brand__logo" src="brand/vifast-icon.svg" alt="" width="32" height="32">
-        <span class="brand__name">ViFast</span>
+        <span class="brand-word"><span class="red">Vi</span><em>Fast</em></span>
       </a>
 
       <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav">
@@ -157,8 +157,11 @@
           </article>
           <article class="name-card">
             <h3 class="name-card__title"><span class="name-card__key">Fast</span> — nhanh</h3>
-            <p>Nhanh theo nghĩa đo được: gõ không round-trip server, giọng đọc chạy local, kernel
-              chỉ một lock toàn cục và số syscall đếm được. Nhanh vì ít tầng, không phải vì tối ưu vội.</p>
+            <p><strong>Lõi viết bằng Rust, biên dịch thẳng ra mã máy native</strong> — không máy ảo,
+              không garbage collector. ViFastKey và ViFastOs chạy mã native trực tiếp; ViFastTts dùng
+              nhân ONNX Runtime native cho model, phần điều phối cũng bằng Rust. Nên “nhanh” là nhanh
+              đo được: gõ không round-trip server, giọng đọc chạy local, kernel chỉ một lock toàn cục
+              và số syscall đếm được.</p>
           </article>
         </div>
       </div>

@@ -313,3 +313,9 @@ section[id] { scroll-margin-top: 80px; }
   background: rgba(192,57,43,.08); color: var(--accent-strong);
 }
 @media (prefers-reduced-motion: reduce) { .brand__logo { transition: none; } }
+
+/* wordmark: Vi do + Fast nghieng (dong bo voi ViFastKey / ViFastTts) */
+.brand-word { font-size: 22px; font-weight: 800; letter-spacing: -1px; line-height: 1; }
+.brand-word .red { color: var(--accent); }
+.brand-word em { font-style: italic; color: var(--text); }
+.brand:hover .brand-word .red { color: var(--accent-strong); }

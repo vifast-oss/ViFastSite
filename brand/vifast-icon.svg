@@ -11,7 +11,7 @@
   <rect width="512" height="512" rx="112" fill="url(#vf-bg)"/>
   <g stroke="#FFD84D" stroke-linecap="round" opacity="0.9">
       <line x1="40" y1="198" x2="124" y2="198" stroke-width="22"/>
-      <line x1="40" y1="256" x2="124" y2="256" stroke-width="22"/>
+      <line x1="69" y1="256" x2="124" y2="256" stroke-width="22"/>
       <line x1="40" y1="314" x2="124" y2="314" stroke-width="22"/>
   </g>
   <polygon points="300,110 332.8,210.8 438.9,210.9 353.1,273.2 385.8,374.1 300,311.8 214.2,374.1 246.9,273.2 161.1,210.9 267.2,210.8"
