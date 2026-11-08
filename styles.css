@@ -341,3 +341,13 @@ section[id] { scroll-margin-top: 80px; }
 .ghost-btn:hover { border-color: var(--accent); color: var(--accent); transform: translateY(-1px);
   box-shadow: 0 8px 18px -12px rgba(31, 36, 48, .5); }
 .ghost-btn .gh-ico { width: 17px; height: 17px; fill: currentColor; flex: 0 0 auto; }
+
+/* Đầu trang mobile: logo — GitHub — nút menu (đúng thứ tự này) ----------- */
+.site-header__inner .site-nav { margin-left: auto; }
+
+@media (max-width: 960px) {
+  .site-header__inner { gap: 12px; }
+  .site-header__inner .brand { order: 1; margin-right: auto; }
+  .site-header__inner .ghost-btn { order: 2; margin-left: 0; padding: 7px 12px; font-size: 13px; }
+  .site-header__inner .nav-toggle { order: 3; margin-left: 0; }
+}
