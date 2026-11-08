@@ -1,0 +1,44 @@
+# Production compose for vifast.org (landing page).
+# Container joins the external `coolify` network so the Coolify Traefik
+# instance on the same host discovers it via docker labels.
+#
+#   docker compose up -d --build
+#
+# TLS: Let's Encrypt via Traefik (certresolver `letsencrypt`).
+
+services:
+  site:
+    build: .
+    image: vifastsite:latest
+    container_name: vifastsite
+    restart: unless-stopped
+    expose:
+      - "80"
+    networks:
+      - coolify
+    labels:
+      - "traefik.enable=true"
+      - "traefik.docker.network=coolify"
+      - "traefik.http.middlewares.vifastsite-redirect.redirectscheme.scheme=https"
+      - "traefik.http.middlewares.vifastsite-compress.compress=true"
+      - "traefik.http.routers.vifastsite-http.rule=Host(`vifast.org`) || Host(`www.vifast.org`)"
+      - "traefik.http.routers.vifastsite-http.entrypoints=http"
+      - "traefik.http.routers.vifastsite-http.middlewares=vifastsite-redirect"
+      - "traefik.http.routers.vifastsite-http.service=vifastsite"
+      - "traefik.http.routers.vifastsite-https.rule=Host(`vifast.org`) || Host(`www.vifast.org`)"
+      - "traefik.http.routers.vifastsite-https.entrypoints=https"
+      - "traefik.http.routers.vifastsite-https.middlewares=vifastsite-compress"
+      - "traefik.http.routers.vifastsite-https.tls=true"
+      - "traefik.http.routers.vifastsite-https.tls.certresolver=letsencrypt"
+      - "traefik.http.routers.vifastsite-https.service=vifastsite"
+      - "traefik.http.services.vifastsite.loadbalancer.server.port=80"
+    healthcheck:
+      test: ["CMD", "wget", "-qO-", "http://127.0.0.1/healthz"]
+      interval: 30s
+      timeout: 5s
+      retries: 3
+      start_period: 10s
+
+networks:
+  coolify:
+    external: true

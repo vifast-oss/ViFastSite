@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>ViFast — phần mềm Việt, nhỏ và nhanh</title>
+  <meta name="description" content="ViFast: ba dự án mã nguồn mở của một người Việt — bộ gõ tiếng Việt, giọng đọc tiếng Việt và hệ điều hành microkernel. Nhỏ, nhanh, chạy local, giấy phép MIT.">
+  <meta name="theme-color" content="#FFF8EC">
+  <link rel="stylesheet" href="styles.css">
+  <script src="app.js" defer></script>
+</head>
+<body id="top">
+  <a class="skip-link" href="#main">Bỏ qua điều hướng</a>
+
+  <header class="site-header">
+    <div class="container site-header__inner">
+      <a class="brand" href="#top" aria-label="ViFast — về đầu trang">
+        <span class="brand__mark" aria-hidden="true">V</span>
+        <span class="brand__name">ViFast</span>
+      </a>
+
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav">
+        <span class="nav-toggle__bars" aria-hidden="true"></span>
+        <span class="sr-only">Menu</span>
+      </button>
+
+      <nav class="site-nav" id="site-nav" aria-label="Chính">
+        <ul class="site-nav__list">
+          <li><a href="#du-an">Dự án</a></li>
+          <li><a href="#vi-sao">Vì sao ViFast</a></li>
+          <li><a href="#ma-nguon">Mã nguồn</a></li>
+          <li><a href="https://github.com/vifast-oss" target="_blank" rel="noopener">GitHub</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="container">
+        <p class="eyebrow" lang="en">Small software, made in Vietnam</p>
+        <h1 id="hero-title">ViFast — phần mềm Việt, nhỏ và nhanh</h1>
+        <p class="hero__lead">Ba dự án mã nguồn mở do một người Việt làm: bộ gõ tiếng Việt, giọng đọc tiếng Việt và một hệ điều hành microkernel. Tất cả chạy local, mã nguồn mở theo giấy phép MIT.</p>
+        <div class="hero__actions">
+          <a class="btn" href="#du-an">Xem ba dự án</a>
+          <a class="link-arrow" href="https://github.com/vifast-oss" target="_blank" rel="noopener">Mã nguồn trên GitHub <span aria-hidden="true">→</span></a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="du-an" aria-labelledby="du-an-title">
+      <div class="container">
+        <header class="section__head">
+          <h2 id="du-an-title">Ba dự án</h2>
+          <p class="section__en" lang="en">Three projects, one small stack</p>
+        </header>
+
+        <div class="cards">
+          <article class="card">
+            <div class="card__head">
+              <h3 class="card__name">ViFastKey</h3>
+              <span class="release" data-release="ViFastKey" hidden></span>
+            </div>
+            <p class="card__desc">Bộ gõ tiếng Việt hỗ trợ Telex, Simple Telex, VNI và VIQR. Lõi Rust rất nhỏ, chạy hoàn toàn local, có C ABI, WASM, API Python và demo UEFI x86_64.</p>
+            <ul class="chips" aria-label="Thông tin kỹ thuật của ViFastKey">
+              <li class="chip">Rust</li>
+              <li class="chip">WASM</li>
+              <li class="chip">C ABI</li>
+              <li class="chip">UEFI demo</li>
+              <li class="chip">MIT</li>
+            </ul>
+            <a class="btn btn--card" href="https://key.vifast.org">Mở key.vifast.org</a>
+          </article>
+
+          <article class="card">
+            <div class="card__head">
+              <h3 class="card__name">ViFastTts</h3>
+              <span class="release" data-release="ViFastTts" hidden></span>
+            </div>
+            <p class="card__desc">Giọng đọc tiếng Việt chạy trên CPU với ONNX acoustic và vocoder. Chạy local ngay trong trình duyệt qua WASM + ONNX Runtime Web; không gửi văn bản hay model ra ngoài.</p>
+            <ul class="chips" aria-label="Thông tin kỹ thuật của ViFastTts">
+              <li class="chip">ONNX</li>
+              <li class="chip">CPU</li>
+              <li class="chip">WASM</li>
+              <li class="chip">offline</li>
+              <li class="chip">MIT</li>
+            </ul>
+            <a class="btn btn--card" href="https://tts.vifast.org">Mở tts.vifast.org</a>
+          </article>
+
+          <article class="card">
+            <div class="card__head">
+              <h3 class="card__name">ViFastOs</h3>
+              <span class="release" data-release="ViFastOs" hidden></span>
+            </div>
+            <p class="wip">đang phát triển • đăng ký sớm</p>
+            <p class="card__desc">Hệ điều hành microkernel kiểu seL4 viết bằng Rust. Capability-based, kernel <code>no_std</code> và <code>#![forbid(unsafe_code)]</code>, IPC + notification, chạy trên QEMU với ba kiến trúc riscv64 / aarch64 / x86_64.</p>
+            <ul class="chips" aria-label="Thông tin kỹ thuật của ViFastOs">
+              <li class="chip">Rust</li>
+              <li class="chip">no_std</li>
+              <li class="chip">capability</li>
+              <li class="chip">riscv64</li>
+              <li class="chip">aarch64</li>
+              <li class="chip">x86_64</li>
+              <li class="chip">MIT</li>
+            </ul>
+            <a class="btn btn--card" href="https://os.vifast.org">Mở os.vifast.org</a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--why" id="vi-sao" aria-labelledby="vi-sao-title">
+      <div class="container">
+        <header class="section__head">
+          <h2 id="vi-sao-title">Vì sao ViFast</h2>
+          <p class="section__en" lang="en">Why ViFast</p>
+        </header>
+        <ul class="why">
+          <li class="why__item">
+            <h3 class="why__title">nhỏ — ít phụ thuộc</h3>
+            <p>Mỗi dự án chỉ giữ phần cần thiết: không framework, không runtime nặng, không phụ thuộc dịch vụ bên ngoài.</p>
+          </li>
+          <li class="why__item">
+            <h3 class="why__title">nhanh — chạy local, không round-trip server</h3>
+            <p>Xử lý ngay trên máy hoặc trong trình duyệt. Không gửi dữ liệu lên server, không có round-trip mạng.</p>
+          </li>
+          <li class="why__item">
+            <h3 class="why__title">mở — mã nguồn MIT trên GitHub <span class="nowrap">vifast-oss</span></h3>
+            <p>Toàn bộ mã nguồn công khai tại <a href="https://github.com/vifast-oss" target="_blank" rel="noopener">github.com/vifast-oss</a>, giấy phép MIT.</p>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="section" id="ma-nguon" aria-labelledby="ma-nguon-title">
+      <div class="container">
+        <header class="section__head">
+          <h2 id="ma-nguon-title">Mã nguồn</h2>
+          <p class="section__en" lang="en">MIT-licensed, on GitHub</p>
+        </header>
+        <ul class="repos">
+          <li>
+            <a class="repo" href="https://github.com/vifast-oss/ViFastKey" target="_blank" rel="noopener">
+              <span class="repo__name">ViFastKey</span>
+              <span class="repo__path">github.com/vifast-oss/ViFastKey</span>
+            </a>
+          </li>
+          <li>
+            <a class="repo" href="https://github.com/vifast-oss/ViFastTts" target="_blank" rel="noopener">
+              <span class="repo__name">ViFastTts</span>
+              <span class="repo__path">github.com/vifast-oss/ViFastTts</span>
+            </a>
+          </li>
+          <li>
+            <a class="repo" href="https://github.com/vifast-oss/ViFastOs" target="_blank" rel="noopener">
+              <span class="repo__name">ViFastOs</span>
+              <span class="repo__path">github.com/vifast-oss/ViFastOs</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container site-footer__inner">
+      <p class="site-footer__copy">© 2026 ViFast · MIT License</p>
+      <ul class="site-footer__links">
+        <li><a href="https://key.vifast.org">key.vifast.org</a></li>
+        <li><a href="https://tts.vifast.org">tts.vifast.org</a></li>
+        <li><a href="https://os.vifast.org">os.vifast.org</a></li>
+      </ul>
+    </div>
+  </footer>
+</body>
+</html>
