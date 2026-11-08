@@ -26,7 +26,7 @@
   <meta name="twitter:title" content="ViFast — phần mềm Việt, nhỏ và nhanh">
   <meta name="twitter:description" content="Bộ gõ tiếng Việt, giọng đọc tiếng Việt và hệ điều hành microkernel. Mã nguồn mở MIT.">
   <meta name="twitter:image" content="https://vifast.org/brand/og-1200.png">
-  <link rel="stylesheet" href="styles.css?v=20261108d">
+  <link rel="stylesheet" href="styles.css?v=20261108f">
   <script src="app.js?v=20261108d" defer></script>
 </head>
 <body id="top">
@@ -58,16 +58,49 @@
     </div>
   </header>
 
-  <main id="main">
+<main id="main">
     <section class="hero" aria-labelledby="hero-title">
-      <div class="container">
-        <p class="eyebrow" lang="en">Small software, made in Vietnam</p>
-        <h1 id="hero-title">ViFast — phần mềm Việt, nhỏ và nhanh</h1>
-        <p class="hero__lead">Ba dự án mã nguồn mở do một người Việt làm: bộ gõ tiếng Việt, giọng đọc tiếng Việt và một hệ điều hành microkernel. Tất cả chạy local, mã nguồn mở theo giấy phép MIT.</p>
-        <div class="hero__actions">
-          <a class="btn" href="#du-an">Xem ba dự án</a>
-          <a class="link-arrow" href="https://github.com/vifast-oss" target="_blank" rel="noopener noreferrer">Mã nguồn trên GitHub <span aria-hidden="true">→</span></a>
+      <div class="container hero__inner">
+        <div class="hero__copy">
+          <p class="eyebrow" lang="en">Small software, made in Vietnam</p>
+          <h1 id="hero-title">ViFast — phần mềm Việt,<br class="br-wide"> nhỏ và nhanh</h1>
+          <p class="hero__lead">Ba dự án mã nguồn mở của một người Việt: bộ gõ tiếng Việt, giọng đọc tiếng Việt và một hệ điều hành microkernel. Chạy ngay trên máy bạn, không gửi dữ liệu đi đâu, giấy phép MIT.</p>
+          <div class="hero__actions">
+            <a class="btn" href="#du-an">Xem ba dự án</a>
+            <a class="link-arrow" href="https://github.com/vifast-oss" target="_blank" rel="noopener noreferrer">Mã nguồn trên GitHub <span aria-hidden="true">→</span></a>
+          </div>
+          <ul class="facts" aria-label="Thông tin nhanh">
+            <li><strong>3</strong><span>dự án</span></li>
+            <li><strong>0</strong><span>phụ thuộc ngoài</span></li>
+            <li><strong>local</strong><span>không round-trip</span></li>
+            <li><strong>MIT</strong><span>giấy phép</span></li>
+          </ul>
         </div>
+
+        <aside class="stack" aria-label="Ba dự án trong một stack">
+          <p class="stack__head"><span class="stack__dot" aria-hidden="true"></span> một stack nhỏ</p>
+          <ul class="stack__list">
+            <li>
+              <img src="brand/vifastkey-icon-192.png" alt="" width="34" height="34" loading="lazy">
+              <span class="stack__name">ViFastKey</span>
+              <span class="stack__tag">gõ tiếng Việt</span>
+              <span class="stack__lang">Rust</span>
+            </li>
+            <li>
+              <img src="brand/vifasttts-icon-192.png" alt="" width="34" height="34" loading="lazy">
+              <span class="stack__name">ViFastTts</span>
+              <span class="stack__tag">giọng đọc</span>
+              <span class="stack__lang">ONNX</span>
+            </li>
+            <li>
+              <img src="brand/vifastos-icon-192.png" alt="" width="34" height="34" loading="lazy">
+              <span class="stack__name">ViFastOs</span>
+              <span class="stack__tag">microkernel</span>
+              <span class="stack__lang">no_std</span>
+            </li>
+          </ul>
+          <p class="stack__foot"><span>một người làm</span><span>·</span><span>mã mở</span><span>·</span><span>không CDN</span></p>
+        </aside>
       </div>
     </section>
 
@@ -80,11 +113,15 @@
 
         <div class="cards">
           <article class="card">
-            <div class="card__head">
-              <h3 class="card__name">ViFastKey</h3>
+            <div class="card__top">
+              <img class="card__icon" src="brand/vifastkey-icon-192.png" alt="" width="34" height="34" loading="lazy">
+              <div class="card__id">
+                <h3 class="card__name">ViFastKey</h3>
+                <span class="card__tag">bộ gõ tiếng Việt</span>
+              </div>
               <span class="release" data-release="ViFastKey" hidden></span>
             </div>
-            <p class="card__desc">Bộ gõ tiếng Việt hỗ trợ Telex, Simple Telex, VNI và VIQR. Lõi Rust rất nhỏ, chạy hoàn toàn local, có C ABI, WASM, API Python và demo UEFI x86_64.</p>
+            <p class="card__desc">Bộ gõ Telex, Simple Telex, VNI và VIQR. Lõi Rust rất nhỏ, chạy hoàn toàn local, có C ABI, WASM, API Python và demo UEFI x86_64.</p>
             <ul class="chips" aria-label="Thông tin kỹ thuật của ViFastKey">
               <li class="chip">Rust</li>
               <li class="chip">WASM</li>
@@ -99,8 +136,12 @@
           </article>
 
           <article class="card">
-            <div class="card__head">
-              <h3 class="card__name">ViFastTts</h3>
+            <div class="card__top">
+              <img class="card__icon" src="brand/vifasttts-icon-192.png" alt="" width="34" height="34" loading="lazy">
+              <div class="card__id">
+                <h3 class="card__name">ViFastTts</h3>
+                <span class="card__tag">giọng đọc tiếng Việt</span>
+              </div>
               <span class="release" data-release="ViFastTts" hidden></span>
             </div>
             <p class="card__desc">Giọng đọc tiếng Việt chạy trên CPU với ONNX acoustic và vocoder. Chạy local ngay trong trình duyệt qua WASM + ONNX Runtime Web; không gửi văn bản hay model ra ngoài.</p>
@@ -118,12 +159,16 @@
           </article>
 
           <article class="card">
-            <div class="card__head">
-              <h3 class="card__name">ViFastOs</h3>
+            <div class="card__top">
+              <img class="card__icon" src="brand/vifastos-icon-192.png" alt="" width="34" height="34" loading="lazy">
+              <div class="card__id">
+                <h3 class="card__name">ViFastOs</h3>
+                <span class="card__tag">hệ điều hành microkernel</span>
+              </div>
               <span class="release" data-release="ViFastOs" hidden></span>
             </div>
+            <p class="card__desc">Microkernel kiểu seL4 viết bằng Rust: capability-based, kernel <code>no_std</code> và <code>#![forbid(unsafe_code)]</code>, IPC + notification, chạy QEMU trên riscv64 / aarch64 / x86_64.</p>
             <p class="wip">đang phát triển • đăng ký sớm</p>
-            <p class="card__desc">Hệ điều hành microkernel kiểu seL4 viết bằng Rust. Capability-based, kernel <code>no_std</code> và <code>#![forbid(unsafe_code)]</code>, IPC + notification, chạy trên QEMU với ba kiến trúc riscv64 / aarch64 / x86_64.</p>
             <ul class="chips" aria-label="Thông tin kỹ thuật của ViFastOs">
               <li class="chip">Rust</li>
               <li class="chip">no_std</li>
@@ -131,7 +176,6 @@
               <li class="chip">riscv64</li>
               <li class="chip">aarch64</li>
               <li class="chip">x86_64</li>
-              <li class="chip">MIT</li>
             </ul>
             <div class="card__links">
               <a class="btn btn--card" href="https://os.vifast.org" rel="noopener noreferrer" target="_blank">Mở os.vifast.org</a>
@@ -150,14 +194,23 @@
         </header>
         <ul class="why">
           <li class="why__item">
+            <span class="why__ico" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M20.2 3.8a6 6 0 0 0-8.5 0L5 10.5V19h8.5l6.7-6.7a6 6 0 0 0 0-8.5z"/><path d="M4 20l6.5-6.5"/></svg>
+            </span>
             <h3 class="why__title">nhỏ — ít phụ thuộc</h3>
             <p>Mỗi dự án chỉ giữ phần cần thiết: không framework, không runtime nặng, không phụ thuộc dịch vụ bên ngoài.</p>
           </li>
           <li class="why__item">
+            <span class="why__ico" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2 4.5 13.5H11l-1 8.5 8.5-11.5H12z"/></svg>
+            </span>
             <h3 class="why__title">nhanh — chạy local, không round-trip server</h3>
             <p>Xử lý ngay trên máy hoặc trong trình duyệt. Không gửi dữ liệu lên server, không có round-trip mạng.</p>
           </li>
           <li class="why__item">
+            <span class="why__ico" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M8.5 6.5 3 12l5.5 5.5"/><path d="M15.5 6.5 21 12l-5.5 5.5"/></svg>
+            </span>
             <h3 class="why__title">mở — mã nguồn MIT trên GitHub <span class="nowrap">vifast-oss</span></h3>
             <p>Toàn bộ mã nguồn công khai tại <a href="https://github.com/vifast-oss" target="_blank" rel="noopener noreferrer">github.com/vifast-oss</a>, giấy phép MIT.</p>
           </li>
@@ -167,29 +220,39 @@
 
     <section class="section section--name" id="ten-goi" aria-labelledby="ten-goi-title">
       <div class="container">
-        <h2 class="section__title" id="ten-goi-title">Vì sao tên ViFast</h2>
-        <p class="section__lead">Ba chữ, ba ý — và cả ba đều đúng với cách ViFast được viết.</p>
-        <div class="name-grid">
-          <article class="name-card">
-            <h3 class="name-card__title"><span class="name-card__key">Vi</span> — Việt Nam</h3>
-            <p>Làm bởi người Việt, cho tiếng Việt: bộ gõ Telex/VNI, giọng đọc tiếng Việt, và một
-              hệ điều hành viết từ đầu. Màu đỏ và ngôi sao vàng là chủ ý, không phải trang trí.</p>
+        <header class="section__head">
+          <h2 id="ten-goi-title">Vì sao tên ViFast</h2>
+          <p class="section__en">Ba chữ, ba ý — cả ba đều đúng với cách ViFast được viết.</p>
+        </header>
+        <div class="name-list">
+          <article class="name-row">
+            <span class="name-badge">Vi</span>
+            <div class="name-row__body">
+              <h3 class="name-row__title">Việt Nam</h3>
+              <p>Làm bởi người Việt, cho tiếng Việt: bộ gõ Telex/VNI, giọng đọc tiếng Việt, và một
+                hệ điều hành viết từ đầu. Màu đỏ và ngôi sao vàng là chủ ý, không phải trang trí.</p>
+            </div>
           </article>
-          <article class="name-card">
-            <h3 class="name-card__title"><span class="name-card__key">Vi</span> — "vi xử lý" (micro)</h3>
-            <p>“Vi” còn là <em>vi</em> trong <em>vi xử lý</em> — tức là <strong>nhỏ</strong>. ViFastKey
-              giữ lõi Rust gọn, ViFastTts chạy model ONNX ngay trên CPU, ViFastOs giữ kernel
-              <code>no_std</code> với hạn mức tĩnh rõ ràng thay vì phình to.</p>
+          <article class="name-row">
+            <span class="name-badge">Vi</span>
+            <div class="name-row__body">
+              <h3 class="name-row__title">vi xử lý <em>(micro)</em></h3>
+              <p>“Vi” còn là <em>vi</em> trong <em>vi xử lý</em> — tức là <strong>nhỏ</strong>. ViFastKey
+                giữ lõi Rust gọn, ViFastTts chạy model ONNX ngay trên CPU, ViFastOs giữ kernel
+                <code>no_std</code> với hạn mức tĩnh rõ ràng thay vì phình to.</p>
+            </div>
           </article>
-          <article class="name-card">
-            <h3 class="name-card__title"><span class="name-card__key">Fast</span> — nhanh</h3>
-            <p><strong>Lõi viết bằng Rust, biên dịch thẳng ra mã máy native</strong> — không máy ảo,
-              không garbage collector. ViFastKey và ViFastOs chạy mã native trực tiếp; ViFastTts dùng
-              nhân ONNX Runtime native cho model, phần điều phối cũng bằng Rust. Nên “nhanh” là nhanh
-              đo được: gõ không round-trip server, giọng đọc chạy local, kernel chỉ một lock toàn cục
-              và số syscall đếm được.</p>
+          <article class="name-row">
+            <span class="name-badge">Fast</span>
+            <div class="name-row__body">
+              <h3 class="name-row__title">nhanh</h3>
+              <p><strong>Lõi viết bằng Rust, biên dịch thẳng ra mã máy native</strong> — không máy ảo,
+                không garbage collector. ViFastKey và ViFastOs chạy mã native trực tiếp; ViFastTts dùng
+                nhân ONNX Runtime native cho model, phần điều phối cũng bằng Rust. Nên “nhanh” là nhanh
+                đo được: gõ không round-trip server, giọng đọc chạy local, kernel chỉ một lock toàn cục
+                và số syscall đếm được.</p>
+            </div>
           </article>
-        </div>
       </div>
     </section>
 
@@ -202,20 +265,26 @@
         <ul class="repos">
           <li>
             <a class="repo" href="https://github.com/vifast-oss/ViFastKey" target="_blank" rel="noopener noreferrer">
+              <img class="repo__icon" src="brand/vifastkey-icon-192.png" alt="" width="28" height="28" loading="lazy">
               <span class="repo__name">ViFastKey</span>
-              <span class="repo__path">github.com/vifast-oss/ViFastKey</span>
+              <span class="repo__path">vifast-oss/ViFastKey</span>
+              <span class="repo__arrow" aria-hidden="true">↗</span>
             </a>
           </li>
           <li>
             <a class="repo" href="https://github.com/vifast-oss/ViFastTts" target="_blank" rel="noopener noreferrer">
+              <img class="repo__icon" src="brand/vifasttts-icon-192.png" alt="" width="28" height="28" loading="lazy">
               <span class="repo__name">ViFastTts</span>
-              <span class="repo__path">github.com/vifast-oss/ViFastTts</span>
+              <span class="repo__path">vifast-oss/ViFastTts</span>
+              <span class="repo__arrow" aria-hidden="true">↗</span>
             </a>
           </li>
           <li>
             <a class="repo" href="https://github.com/vifast-oss/ViFastOs" target="_blank" rel="noopener noreferrer">
+              <img class="repo__icon" src="brand/vifastos-icon-192.png" alt="" width="28" height="28" loading="lazy">
               <span class="repo__name">ViFastOs</span>
-              <span class="repo__path">github.com/vifast-oss/ViFastOs</span>
+              <span class="repo__path">vifast-oss/ViFastOs</span>
+              <span class="repo__arrow" aria-hidden="true">↗</span>
             </a>
           </li>
         </ul>
