@@ -330,3 +330,14 @@ section[id] { scroll-margin-top: 80px; }
 .brand-word .red { color: var(--accent); }
 .brand-word em { font-style: italic; color: var(--text); }
 .brand:hover .brand-word .red { color: var(--accent-strong); }
+
+/* Nút GitHub trong header ---------------------------------------- */
+.ghost-btn {
+  display: inline-flex; align-items: center; gap: 8px;
+  padding: 8px 14px; border: 1px solid var(--border); border-radius: 999px;
+  background: var(--card); color: var(--text); font-size: 14px; font-weight: 600;
+  text-decoration: none; transition: border-color .15s ease, transform .15s ease, box-shadow .15s ease;
+}
+.ghost-btn:hover { border-color: var(--accent); color: var(--accent); transform: translateY(-1px);
+  box-shadow: 0 8px 18px -12px rgba(31, 36, 48, .5); }
+.ghost-btn .gh-ico { width: 17px; height: 17px; fill: currentColor; flex: 0 0 auto; }
