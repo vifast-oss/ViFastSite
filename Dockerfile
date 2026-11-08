@@ -5,6 +5,7 @@ COPY nginx.conf /etc/nginx/conf.d/default.conf
 
 # Site thuần tĩnh, không có bước build
 COPY index.html styles.css app.js /usr/share/nginx/html/
+COPY brand /usr/share/nginx/html/brand
 
 EXPOSE 80
 

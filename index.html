@@ -6,6 +6,12 @@
   <title>ViFast — phần mềm Việt, nhỏ và nhanh</title>
   <meta name="description" content="ViFast: ba dự án mã nguồn mở của một người Việt — bộ gõ tiếng Việt, giọng đọc tiếng Việt và hệ điều hành microkernel. Nhỏ, nhanh, chạy local, giấy phép MIT.">
   <meta name="theme-color" content="#FFF8EC">
+    <link rel="icon" href="brand/vifast-icon.svg" type="image/svg+xml">
+  <link rel="icon" type="image/png" sizes="32x32" href="brand/vifast-icon-32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="brand/vifast-icon-16.png">
+  <link rel="apple-touch-icon" href="brand/vifast-icon-180.png">
+  <link rel="manifest" href="brand/site.webmanifest">
+  <meta property="og:image" content="https://vifast.org/brand/vifast-icon-512.png">
   <link rel="stylesheet" href="styles.css">
   <script src="app.js" defer></script>
 </head>
@@ -15,7 +21,7 @@
   <header class="site-header">
     <div class="container site-header__inner">
       <a class="brand" href="#top" aria-label="ViFast — về đầu trang">
-        <span class="brand__mark" aria-hidden="true">V</span>
+        <img class="brand__logo" src="brand/vifast-icon.svg" alt="" width="32" height="32">
         <span class="brand__name">ViFast</span>
       </a>
 
@@ -130,6 +136,31 @@
             <p>Toàn bộ mã nguồn công khai tại <a href="https://github.com/vifast-oss" target="_blank" rel="noopener">github.com/vifast-oss</a>, giấy phép MIT.</p>
           </li>
         </ul>
+      </div>
+    </section>
+
+    <section class="section section--name" id="ten-goi" aria-labelledby="ten-goi-title">
+      <div class="container">
+        <h2 class="section__title" id="ten-goi-title">Vì sao tên ViFast</h2>
+        <p class="section__lead">Ba chữ, ba ý — và cả ba đều đúng với cách ViFast được viết.</p>
+        <div class="name-grid">
+          <article class="name-card">
+            <h3 class="name-card__title"><span class="name-card__key">Vi</span> — Việt Nam</h3>
+            <p>Làm bởi người Việt, cho tiếng Việt: bộ gõ Telex/VNI, giọng đọc tiếng Việt, và một
+              hệ điều hành viết từ đầu. Màu đỏ và ngôi sao vàng là chủ ý, không phải trang trí.</p>
+          </article>
+          <article class="name-card">
+            <h3 class="name-card__title"><span class="name-card__key">Vi</span> — "vi xử lý" (micro)</h3>
+            <p>“Vi” còn là <em>vi</em> trong <em>vi xử lý</em> — tức là <strong>nhỏ</strong>. ViFastKey
+              giữ lõi Rust gọn, ViFastTts chạy model ONNX ngay trên CPU, ViFastOs giữ kernel
+              <code>no_std</code> với hạn mức tĩnh rõ ràng thay vì phình to.</p>
+          </article>
+          <article class="name-card">
+            <h3 class="name-card__title"><span class="name-card__key">Fast</span> — nhanh</h3>
+            <p>Nhanh theo nghĩa đo được: gõ không round-trip server, giọng đọc chạy local, kernel
+              chỉ một lock toàn cục và số syscall đếm được. Nhanh vì ít tầng, không phải vì tối ưu vội.</p>
+          </article>
+        </div>
       </div>
     </section>
 

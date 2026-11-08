@@ -290,3 +290,26 @@ section[id] { scroll-margin-top: 80px; }
     transition-duration: .01ms !important;
   }
 }
+
+/* --- logo + ten goi --- */
+.brand__logo { display: block; width: 32px; height: 32px; border-radius: 8px; }
+.brand:hover .brand__logo { filter: brightness(1.05); }
+
+.section--name .section__lead { max-width: 62ch; }
+.name-grid {
+  display: grid; gap: 18px; margin-top: 28px;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+}
+.name-card {
+  padding: 22px; border: 1px solid var(--border); border-radius: 16px;
+  background: var(--card); color: var(--text);
+}
+.name-card__title { margin: 0 0 10px; font-size: 18px; font-weight: 700; }
+.name-card__key { color: var(--accent); }
+.name-card p { margin: 0; font-size: 15px; line-height: 1.65; color: var(--muted); }
+.name-card code {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  font-size: 13px; padding: 1px 5px; border-radius: 5px;
+  background: rgba(192,57,43,.08); color: var(--accent-strong);
+}
+@media (prefers-reduced-motion: reduce) { .brand__logo { transition: none; } }
