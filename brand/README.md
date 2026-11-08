@@ -12,9 +12,9 @@ Logo vector cho thương hiệu mẹ **ViFast** (dùng cho `vifast.org`).
 
 ## Ý nghĩa hình
 
-- **Nền đỏ + sao vàng**: màu cờ Việt Nam, dùng có chủ ý.
-- **Ba vệt ngang**: tốc độ (Fast).
-- **Chữ V kem**: chữ cái đầu của *Vi*, đồng thời là mũi tên đi xuống tạo cảm giác chuyển động.
+- **Nền đỏ + sao vàng lớn ở giữa**: màu cờ Việt Nam, dùng có chủ ý; sao là tâm điểm.
+- **Ba vệt ngang bên trái**: tốc độ (Fast), đặt lệch trái để tạo cảm giác lao tới.
+- Không dùng chữ cái trong icon — dấu hiệu nhận biết nằm ở hình (sao + vệt tốc độ).
 
 ## Tệp
 
