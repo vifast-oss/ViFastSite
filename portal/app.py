@@ -29,11 +29,13 @@ portal = Portal(
     title="ViFast",
     db_path=DATA_DIR / "stats.sqlite3",
     accent="#C0392B",
+    favicon="/brand/vifast-icon-32.png",
+    admin_key="site",
 )
 portal.install(
     app,
-    dashboard="<p class=\"vf-muted\">Trang chủ là HTML tĩnh, số liệu lấy từ beacon "
-    "<code>/track.js</code> (chỉ đếm khi trình duyệt bật JavaScript).</p>",
+    dashboard="Trang chủ là HTML tĩnh, số liệu lấy từ beacon <code>/track.js</code> "
+    "(chỉ đếm khi trình duyệt bật JavaScript).",
 )
 
 # Đoạn beacon: 1 dòng, không thư viện, không cookie, không theo dõi liên trang.
