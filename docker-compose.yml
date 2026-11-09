@@ -7,6 +7,37 @@
 # TLS: Let's Encrypt via Traefik (certresolver `letsencrypt`).
 
 services:
+  # Đăng nhập quản trị (form mật khẩu) + thống kê truy cập cho trang chủ.
+  portal:
+    build: ./portal
+    image: vifastsite-portal:latest
+    container_name: vifastsite-portal
+    restart: unless-stopped
+    environment:
+      ADMIN_PASSWORD: "${ADMIN_PASSWORD:-}"
+      STATS_SALT: "${STATS_SALT:-}"
+      ADMIN_TZ_OFFSET: "7"
+      DATA_DIR: /app/data
+    volumes:
+      - ./portal-data:/app/data
+    expose:
+      - "8000"
+    networks:
+      - coolify
+    security_opt:
+      - no-new-privileges:true
+    logging:
+      driver: json-file
+      options:
+        max-size: "10m"
+        max-file: "3"
+    healthcheck:
+      test: ["CMD", "python", "-c", "import urllib.request; urllib.request.urlopen('http://127.0.0.1:8000/healthz', timeout=3)"]
+      interval: 30s
+      timeout: 5s
+      retries: 3
+      start_period: 10s
+
   site:
     build: .
     image: vifastsite:latest
@@ -16,6 +47,8 @@ services:
       - "80"
     networks:
       - coolify
+    depends_on:
+      - portal
     labels:
       - "traefik.enable=true"
       - "traefik.docker.network=coolify"
