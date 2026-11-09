@@ -69,3 +69,13 @@ Dữ liệu nằm ở `portal-data/stats.sqlite3`. Đổi `ADMIN_PASSWORD` rồi
 | `app.js` | Menu di động, cuộn mượt, huy hiệu phiên bản |
 | `nginx.conf` | Cấu hình server tĩnh (gzip, cache, `/healthz`) |
 | `Dockerfile` | Image `nginx:alpine` chứa site |
+
+## Giấy phép
+
+Mã nguồn phát hành theo **giấy phép kép MIT HOẶC Apache-2.0** — người dùng chọn một trong hai:
+
+- [`LICENSE-MIT`](LICENSE-MIT) — bản ngắn gọn, tương thích GPLv2.
+- [`LICENSE-APACHE`](LICENSE-APACHE) — có điều khoản cấp phép bằng sáng chế (§3).
+
+Biểu thức SPDX: `MIT OR Apache-2.0`. Logo, wordmark và tài nguyên trong `brand/` **không** thuộc
+phạm vi hai giấy phép trên — xem `brand/README.md`.

@@ -37,4 +37,5 @@ Logo vector cho thương hiệu mẹ **ViFast** (dùng cho `vifast.org`).
 | Chữ đậm | `#1F2430` |
 | Chữ phụ | `#6B7280` |
 
-Logo/wordmark **không** thuộc phạm vi giấy phép MIT (xem `TRADEMARKS.md` ở repo tương ứng).
+Logo/wordmark **không** thuộc phạm vi giấy phép MIT hoặc Apache-2.0 (xem `TRADEMARKS.md` ở
+repo tương ứng).
