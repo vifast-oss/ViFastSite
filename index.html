@@ -239,7 +239,7 @@
               <h3 class="name-row__title">vi xử lý <em>(micro)</em></h3>
               <p>“Vi” còn là <em>vi</em> trong <em>vi xử lý</em> — tức là <strong>nhỏ</strong>. ViFastKey
                 giữ lõi Rust gọn, ViFastTts chạy model ONNX ngay trên CPU, ViFastOs giữ kernel
-                <code>no_std</code> với hạn mức tĩnh rõ ràng thay vì phình to.</p>
+                <code>no_std</code> tối giản, dễ đọc và dễ kiểm chứng.</p>
             </div>
           </article>
           <article class="name-row">
@@ -249,10 +249,22 @@
               <p><strong>Lõi viết bằng Rust, biên dịch thẳng ra mã máy native</strong> — không máy ảo,
                 không garbage collector. ViFastKey và ViFastOs chạy mã native trực tiếp; ViFastTts dùng
                 nhân ONNX Runtime native cho model, phần điều phối cũng bằng Rust. Nên “nhanh” là nhanh
-                đo được: gõ không round-trip server, giọng đọc chạy local, kernel chỉ một lock toàn cục
-                và số syscall đếm được.</p>
+                đo được: gõ không round-trip server, giọng đọc chạy local, kernel và bộ gõ đều là
+                mã native.</p>
             </div>
           </article>
+      </div>
+
+        <p class="section__note">
+          ViFast là dự án <strong>mã nguồn mở độc lập</strong>, không liên kết với VinFast hay bất kỳ
+          công ty nào khác. Tên gọi không bắt nguồn từ VinFast; màu đỏ và ngôi sao vàng lấy từ
+          quốc kỳ Việt Nam. Hạn mức tĩnh và khoá toàn cục trong kernel hiện tại chỉ là giới hạn
+          kỹ thuật sẽ cải thiện dần, không phải điều tên gọi muốn nói.
+        </p>
+        <p class="section__en" lang="en">
+          ViFast is an independent open-source project — <strong>not affiliated with VinFast</strong>
+          or any other company.
+        </p>
       </div>
     </section>
 

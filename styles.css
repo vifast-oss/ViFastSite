@@ -169,6 +169,20 @@ a { color: var(--accent); text-decoration: none; }
   line-height: 1.2; letter-spacing: -.01em;
 }
 .section__en { margin: 0; color: var(--muted); font-size: 13.5px; }
+
+/* Ghi chú làm rõ tên gọi / phạm vi (thêm ở section "Vì sao tên ViFast") */
+.section__note {
+  margin: 22px 0 10px;
+  padding: 16px 18px;
+  border: 1px solid var(--border);
+  border-left: 3px solid var(--accent);
+  border-radius: 12px;
+  background: var(--card);
+  color: var(--muted);
+  font-size: 14.5px;
+  line-height: 1.65;
+}
+.section__note strong { color: var(--text); }
 section[id] { scroll-margin-top: 80px; }
 
 /* Thẻ dự án ----------------------------------------------------- */
