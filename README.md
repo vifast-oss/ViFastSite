@@ -1,8 +1,9 @@
 # ViFastSite
 
-Trang đích tĩnh cho **ViFast** — ba dự án mã nguồn mở của một người Việt:
-[ViFastKey](https://key.vifast.org) (bộ gõ), [ViFastTts](https://tts.vifast.org) (giọng đọc)
-và [ViFastOs](https://os.vifast.org) (hệ điều hành microkernel).
+Trang đích tĩnh cho **ViFast** — năm dự án mã nguồn mở của một người Việt:
+[ViFastKey](https://key.vifast.org) (bộ gõ), [ViFastTts](https://tts.vifast.org) (giọng đọc),
+[ViFastOs](https://os.vifast.org) (hệ điều hành microkernel), **ViScript** (ngôn ngữ lập trình)
+và **ViShell** (shell của dòng ViScript).
 
 Site thuần HTML/CSS/JS: không build step, không framework, không CDN, không font ngoài.
 Yêu cầu duy nhất ra mạng là GitHub API để lấy tag bản phát hành mới nhất; nếu lỗi thì huy hiệu
@@ -59,6 +60,9 @@ Dữ liệu nằm ở `portal-data/stats.sqlite3`. Đổi `ADMIN_PASSWORD` rồi
 - `vifast.org` (và `www.vifast.org` nếu trỏ cùng) — trang này.
 - `key.vifast.org`, `tts.vifast.org`, `os.vifast.org` — các dịch vụ riêng, chỉ được liên kết
   từ trang này, không được phục vụ bởi image này.
+- `viscript.vifast.org` (dự kiến) — trang chủ ViScript; chưa dựng, nên thẻ ViScript/ViShell
+  hiện trỏ thẳng về GitHub. Khi dựng xong, đổi `btn--card` của hai thẻ đó thành
+  `Mở viscript.vifast.org`.
 
 ## Cấu trúc
 

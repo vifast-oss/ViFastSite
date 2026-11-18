@@ -26,6 +26,22 @@ Logo vector cho thương hiệu mẹ **ViFast** (dùng cho `vifast.org`).
 | `vifast-icon-{16,32,180,192,512}.png` | favicon PNG, apple-touch-icon, PWA |
 | `site.webmanifest` | manifest PWA |
 
+### Icon từng dự án
+
+Cùng nền đỏ + sao vàng, khác nhau ở hình phía trước — đứng cạnh nhau vẫn thành một họ.
+
+| Tệp | Dự án | Hình |
+|---|---|---|
+| `vifastkey-icon-192.png` | ViFastKey | bộ gõ |
+| `vifasttts-icon-192.png` | ViFastTts | giọng đọc |
+| `vifastos-icon-192.png` | ViFastOs | microkernel |
+| `viscript-icon.svg`, `viscript-icon-192.png` | ViScript | hai ngoặc `[ ]` |
+| `vishell-icon.svg`, `vishell-icon-192.png` | ViShell | dấu nhắc `>` + con trỏ `_` |
+
+Nguồn gốc của hai icon ViScript/ViShell là repo
+[`vifast-oss/ViScript`](https://github.com/vifast-oss/ViScript) → `resources/brand/` (đủ mọi cỡ
+16/32/180/192/512). Sửa hình thì sửa ở đó rồi chép sang đây.
+
 ## Bảng màu
 
 | Vai trò | Mã |
